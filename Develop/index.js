@@ -8,19 +8,37 @@ const generateMarkdown = require("./utils/generateMarkdown");
 const questions = [];
 var prompt = inquirer.createPromptModule();
 
-prompt([{
-    type: 'input',
-    name: 'projectTitle',
-    message: 'enter your project title',
-}, {
-    type: 'input',
-    name: 'description',
-    message: 'enter your project description',
-}, {
-    type: 'input',
-    name: 'usage',
-    message: 'enter your project usage information',
-},
+prompt([
+    {
+        type: 'input',
+        name: 'projectTitle',
+        message: 'Enter your project title: ',
+    },
+    {
+        type: 'input',
+        name: 'description',
+        message: 'Enter your project description :',
+    },
+    {
+        type: 'input',
+        name: 'installation: ',
+        message: 'Enter your project installation instructions: ',
+    },
+    {
+        type: 'input',
+        name: 'usage: ',
+        message: 'Enter your project usage: ',
+    },
+    {
+        type: 'input',
+        name: 'contributing: ',
+        message: 'Enter project contribution instructions: ',
+    },
+    {
+        type: 'input',
+        name: 'installation: ',
+        message: 'Enter your project installation instructions: ',
+    },
     {
         type: 'list',
         name:  'license',
@@ -32,7 +50,7 @@ prompt([{
     `
     // could add all the info into the template literal
 
-    const description = ${answers.description};
+    const mine = `${answers.description}`
 
     // repeat for other sections that will be at the TOC level
 
@@ -40,7 +58,7 @@ prompt([{
     console.log(`${answers.projectTitle}` + JSON.stringify(answers));
 });
 
-generateMarkdown(prompt).then(answers => {})
+//generateMarkdown(prompt).then(answers => {})
 
 
 
