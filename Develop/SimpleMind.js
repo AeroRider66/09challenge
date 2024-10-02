@@ -7,13 +7,13 @@ console.log("hello world");
 var prompt = inquirer.createPromptModule();
 
 prompt([{
-    type: 'confirm',
+    type: 'input',
     name: 'repeat_questions',
-    message: 'Are you done?',
+    message: 'Anything you want',
 }, {
-    type: 'confirm',
+    type: 'input',
     name: 'dave_questions',
-    message: 'Are you done?',
+    message: 'last chance',
 }]).then(answers => {
     console.log("answers: " + JSON.stringify(answers));
 });
