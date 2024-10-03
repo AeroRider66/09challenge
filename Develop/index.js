@@ -5,7 +5,7 @@ const fs = require('fs');
 const generateMarkdown = require("./utils/generateMarkdown");
 
 // TODO: Create an array of questions for user input
-const questions = [];
+
 var prompt = inquirer.createPromptModule();
 
 prompt([
@@ -46,19 +46,25 @@ prompt([
         choices: ['MIT', 'GNU2'],
     }
 ]).then(answers => {
+
     const markdownTemplate = `## Description
     `
     // could add all the info into the template literal
 
-    const mine = `${answers.description}`
+    const mine = `${answers.license}`
+    console.log(mine);
 
     // repeat for other sections that will be at the TOC level
 
     //console.log("answers: " + JSON.stringify(answers));
-    console.log(`${answers.projectTitle}` + JSON.stringify(answers));
+    console.log(`${answers.license}` + JSON.stringify(answers));
+
+    fs.writeFile('myInfo.json', mine, (err) =>
+        err ? console.log(err) : console.log('Successfully created json file!')
+    );
 });
 
-//generateMarkdown(prompt).then(answers => {})
+generateMarkdown(prompt).then(answers => {})
 
 
 
