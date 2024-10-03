@@ -26,13 +26,28 @@ function renderLicenseSection(license) {
 
 
 
-
+// Talk to Nigel
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-  console.log("markdown file", data);
-  console.log("free title", data.title);
-  console.log("free description", data.description);
-  return `# ${data.title} ## ${data.description} finished
+  console.log("markdown file");
+  return `# ${data.title}
+  
+${data.description}
+  
+## Installation
+
+${data.installation}
+
+## Usage
+
+${data.usage}
+
+## Contributing
+
+${data.contributing}
+
+## License
+${data.license}
 
 `;
 }
