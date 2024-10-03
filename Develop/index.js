@@ -6,65 +6,52 @@ const generateMarkdown = require("./utils/generateMarkdown");
 
 // TODO: Create an array of questions for user input
 
-var prompt = inquirer.createPromptModule();
+const prompt = inquirer.createPromptModule();
 
-prompt([
+inquirer.prompt([
     {
         type: 'input',
-        name: 'projectTitle',
+        name: 'title',
         message: 'Enter your project title: ',
     },
     {
         type: 'input',
         name: 'description',
-        message: 'Enter your project description :',
+        message: 'Enter your project description: ',
     },
-    {
-        type: 'input',
-        name: 'installation: ',
-        message: 'Enter your project installation instructions: ',
-    },
-    {
-        type: 'input',
-        name: 'usage: ',
-        message: 'Enter your project usage: ',
-    },
-    {
-        type: 'input',
-        name: 'contributing: ',
-        message: 'Enter project contribution instructions: ',
-    },
-    {
-        type: 'input',
-        name: 'installation: ',
-        message: 'Enter your project installation instructions: ',
-    },
-    {
-        type: 'list',
-        name:  'license',
-        message: 'Select your project license',
-        choices: ['MIT', 'GNU2'],
-    }
+    // {
+    //     type: 'input',
+    //     name: 'installation ',
+    //     message: 'Enter your project installation instructions: ',
+    // },
+    // {
+    //     type: 'input',
+    //     name: 'usage: ',
+    //     message: 'Enter your project usage: ',
+    // },
+    // {
+    //     type: 'input',
+    //     name: 'contributing: ',
+    //     message: 'Enter project contribution instructions: ',
+    // },
+    // {
+    //     type: 'list',
+    //     name:  'license',
+    //     message: 'Select your project license',
+    //     choices: ['MIT', 'GNU2'],
+    // },
 ]).then(answers => {
 
-    const markdownTemplate = `## Description
-    `
     // could add all the info into the template literal
-
-    const mine = `${answers.license}`
-    console.log(mine);
-
     // repeat for other sections that will be at the TOC level
 
-    //console.log("answers: " + JSON.stringify(answers));
-    console.log(`${answers.license}` + JSON.stringify(answers));
+    console.log("afteranswers", answers);
 
-    fs.writeFile('myInfo.json', mine, (err) =>
-        err ? console.log(err) : console.log('Successfully created json file!')
-    );
-});
-
-generateMarkdown(prompt).then(answers => {})
+    generateMarkdown(answers).then(data => {
+        console.log("diditwork");
+        console.log("aftermark",data);
+    });
+}).catch(error => 'error occurred: ' + error.message);
 
 
 
