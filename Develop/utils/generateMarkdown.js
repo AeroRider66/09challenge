@@ -3,7 +3,7 @@
 
 function renderLicenseBadge(license) {
   if(license === 'MIT') {
-    let badge =
+    // let badge =
   }
 }
 
@@ -24,7 +24,7 @@ function renderLicenseSection(license) {
 
 }
 
-
+// ## This is the introduction <a id="introduction"></a>
 
 // Talk to Nigel
 // TODO: Create a function to generate markdown for README
@@ -34,6 +34,14 @@ function generateMarkdown(data) {
   return `# ${data.title}
   
 ${data.description}
+
+## Table of Contents
+1. [Installation](#installation)
+2. [Usage](#usage)
+3. [Contributing](#contributing)
+4. [Tests](#tests)
+5. [License](#license)
+6. [Questions](#questions)
   
 ## Installation
 
@@ -43,12 +51,19 @@ ${data.installation}
 
 ${data.usage}
 
+
 ## Contributing
 
 ${data.contributing}
 
+
 ## License
+
 ${data.license}
+
+## Tests
+
+${data.tests}
 
 `;
 }

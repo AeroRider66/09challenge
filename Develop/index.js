@@ -15,12 +15,12 @@ inquirer.prompt([
     {
         type: 'input',
         name: 'title',
-        message: 'Enter your project title: ',
+        message: 'Enter the title of your project: ',
     },
     {
         type: 'input',
         name: 'description',
-        message: 'Enter your project description: ',
+        message: 'Enter a description of your project: ',
     },
     {
         type: 'input',
@@ -35,13 +35,28 @@ inquirer.prompt([
     {
         type: 'input',
         name: 'contributing',
-        message: 'Enter project contribution instructions: ',
+        message: 'Enter instructions for project contributions: ',
+    },
+    {
+        type: 'input',
+        name: 'tests',
+        message: 'Enter tests and testing instructions for your project: ',
     },
     {
         type: 'list',
         name:  'license',
         message: 'Select your project license',
         choices: ['MIT', 'Apache 2.0', 'BSD 3-Clause','IBM','Mozilla Public License 2.0', 'GNU2', 'WTFPL'],
+    },
+    {
+        type: 'input',
+        name:  'github',
+        message: 'Enter GitHub username: ',
+    },
+    {
+        type: 'input',
+        name:  'email',
+        message: 'Enter GitHub username: ',
     },
 ]).then(answers => {
 
