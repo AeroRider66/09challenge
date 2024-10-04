@@ -17,7 +17,8 @@ Prior to use of this program, the user must have installed node.js and npm inqui
 
 ## Usage
 
-This app may be used by all levels of programmers, and requires that user start in the directory where the index.js file is located.  Run "node index.js".  User will be provided with a set of questions that must be answered to be included in the created README file.
+This app may be used by all levels of programmers, and requires that user start in the directory where the index.js file is located.  Run "node index.js".  User will be provided with a set of questions that must be answered to be included in the created README file.  
+The answers to these questions use the generateMarkdown function provided by the 'utils/generateMarkdown.js' file to parse the data provided to the correct section for the creation of the markdown file.  The 'License' answer is used to lookup the badge for the selected license and provide is provided back for inclusion at the appropriate place in the markdown file.  Once all entries are processed into the appropiate location, resulting document is saved as a markdown file with the name of 'newREADME.md', and will be found in the '/result' folder of the root location.
 
 ## Contributing
 
@@ -25,7 +26,7 @@ Contributions to my bank account are always welcome, however for program contrib
 
 ## Tests
 
-Test scripts must be provided by user.
+Testing performed uses a 'wording.txt' file to provide easy access to random data/text for use in the demonstration of this application.
 
 ## License
 
