@@ -12,9 +12,10 @@
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   const getLicense = (data.license);
-  console.log(getLicense);
+  console.log("this one", getLicense);
+  const completeMeNow = renderLicenseBadge(gitLicense);
 
-  renderLicenseBadge(getLicense); {
+  //renderLicenseBadge(); {
     function renderLicenseBadge(getLicense) {
       let badge
       if (getLicense === 'MIT')
@@ -87,7 +88,7 @@ Github Username:
 Email Address: 
 
 `;
-}
+
 
 module.exports = generateMarkdown;
 
