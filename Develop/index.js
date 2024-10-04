@@ -27,37 +27,38 @@ inquirer.prompt([
         name: 'installation',
         message: 'Enter your project installation instructions: ',
     },
-    {
-        type: 'input',
-        name: 'usage',
-        message: 'Enter your project usage: ',
-    },
-    {
-        type: 'input',
-        name: 'contributing',
-        message: 'Enter instructions for project contributions: ',
-    },
-    {
-        type: 'input',
-        name: 'tests',
-        message: 'Enter tests and testing instructions for your project: ',
-    },
+    // {
+    //     type: 'input',
+    //     name: 'usage',
+    //     message: 'Enter your project usage: ',
+    // },
+    // {
+    //     type: 'input',
+    //     name: 'contributing',
+    //     message: 'Enter instructions for project contributions: ',
+    // },
+    // {
+    //     type: 'input',
+    //     name: 'tests',
+    //     message: 'Enter tests and testing instructions for your project: ',
+    // },
     {
         type: 'list',
         name:  'license',
         message: 'Select your project license',
         choices: ['MIT', 'Apache 2.0', 'BSD 3-Clause','IBM','Mozilla Public License 2.0', 'GNU2', 'WTFPL'],
+        textLicense: '',
     },
-    {
-        type: 'input',
-        name:  'github',
-        message: 'Enter GitHub username: ',
-    },
-    {
-        type: 'input',
-        name:  'email',
-        message: 'Enter GitHub username: ',
-    },
+    // {
+    //     type: 'input',
+    //     name:  'github',
+    //     message: 'Enter GitHub username: ',
+    // },
+    // {
+    //     type: 'input',
+    //     name:  'email',
+    //     message: 'Enter GitHub username: ',
+    // },
 ]).then(answers => {
 
     // could add all the info into the template literal

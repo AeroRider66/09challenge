@@ -2,10 +2,17 @@
 // If there is no license, return an empty string
 
 function renderLicenseBadge(license) {
-  if(license === 'MIT') {
-    let badge = "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)"
 
-  }
+    function getOption(nameLicense) {
+        selectElement = document.querySelector('#select1');
+        output = selectElement.value;
+        document.querySelector('.output').textContent = output;
+    }
+
+
+    if(license === 'MIT') {
+        // let badge =
+    }
 }
 
 // put name of license itself int eh badge:
@@ -30,24 +37,16 @@ function renderLicenseSection(license) {
 // Talk to Nigel
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-  // Ask Nigel - what would be better pass new const back or use the const to set a
-  // value for the {data.license}
-  const onlyLicenseName = data.license;
-  const
+    // Ask Nigel - what would be better pass new const back or use the const to set a
+    // value for the {data.license}
+    const getLicense = data.license;
 
-  function renderLicenseBadge(getLicense) {
 
-  }
+    console.log("extracted License",getLicense);
 
-  renderLicenseBadge(getLicense);
 
-  console.log("extracted License",getLicense);
-  let badge = "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)"
-  console.log("badge", badge);
-
-  console.log("markdown file");
-  return `${badge}
-# ${data.title}
+    console.log("markdown file");
+    return `# ${data.title}
   
 ${data.description}
 
@@ -70,6 +69,7 @@ ${data.usage}
 ## Contributing
 
 ${data.contributing}
+
 
 ## License
 
