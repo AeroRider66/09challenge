@@ -1,36 +1,11 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 
-function renderLicenseBadge(license) {
-
-    function getOption(nameLicense) {
-        selectElement = document.querySelector('#select1');
-        output = selectElement.value;
-        document.querySelector('.output').textContent = output;
-    }
-
-
-    if(license === 'MIT') {
-        // let badge =
-    }
-}
-
-// put name of license itself int eh badge:
-// avoid spaces and dots.
-// Just use the link to set the name (MIT, ...)
-// render the badge
-
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
-function renderLicenseLink(license) {
-
-}
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
-function renderLicenseSection(license) {
-
-}
 
 // ## This is the introduction <a id="introduction"></a>
 
