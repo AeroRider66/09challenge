@@ -12,6 +12,7 @@
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   const getLicense = (data.license);
+  console.log(getLicense);
 
   renderLicenseBadge(getLicense); {
     function renderLicenseBadge(getLicense) {
@@ -72,13 +73,18 @@ ${data.usage}
 
 ${data.contributing}
 
+## Tests
+
+${data.tests}
+
 ## License
 
 Associated License is ${data.license}
 
-## Tests
+## Questions
 
-${data.tests}
+Github Username: 
+Email Address: 
 
 `;
 }
