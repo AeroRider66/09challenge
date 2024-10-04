@@ -74,7 +74,6 @@ function renderLicenseBadge(getLicense) {
         badge = " ";
     }
 
-    console.log("badge run", badge);
     return badge;
 }
 
