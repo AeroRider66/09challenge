@@ -40,14 +40,13 @@ inquirer.prompt([
     // {
     //     type: 'input',
     //     name: 'tests',
-    //     message: 'Enter tests and testing instructions for your project: ',
+    //     //message: 'Enter tests and testing instructions for your project: ',
     // },
     {
         type: 'list',
         name:  'license',
         message: 'Select your project license',
-        choices: ['MIT', 'Apache 2.0', 'BSD 3-Clause','IBM','Mozilla Public License 2.0', 'GNU2', 'WTFPL'],
-        textLicense: '',
+        choices: ['MIT', 'Apache 2.0', 'BSD 3-Clause','IBM','Mozilla Public License 2.0', 'GNU GPL v3', 'WTFPL'],
     },
     // {
     //     type: 'input',
