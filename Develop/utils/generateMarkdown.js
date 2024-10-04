@@ -47,8 +47,9 @@ Associated License is ${data.license}
 
 ## Questions
 
-Github Username: 
-Email Address: 
+#### Github Username: 
+
+#### Email Address: 
 
 `;
 }
