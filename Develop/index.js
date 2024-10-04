@@ -41,7 +41,7 @@ inquirer.prompt([
         type: 'list',
         name:  'license',
         message: 'Select your project license',
-        choices: ['MIT', 'GNU2'],
+        choices: ['MIT', 'Apache 2.0', 'BSD 3-Clause','IBM','Mozilla Public License 2.0', 'GNU2', 'WTFPL'],
     },
 ]).then(answers => {
 

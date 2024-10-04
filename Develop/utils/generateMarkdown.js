@@ -3,7 +3,7 @@
 
 function renderLicenseBadge(license) {
   if(license === 'MIT') {
-
+    let badge =
   }
 }
 
@@ -29,6 +29,7 @@ function renderLicenseSection(license) {
 // Talk to Nigel
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
+
   console.log("markdown file");
   return `# ${data.title}
   
