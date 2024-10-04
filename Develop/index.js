@@ -79,7 +79,7 @@ inquirer.prompt([
         console.log("file written");
     });
 
-}).catch(error => 'error occurred: ' + error.message);
+}).catch(error => console.error(error));
 
 
 
