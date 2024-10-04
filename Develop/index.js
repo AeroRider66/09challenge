@@ -70,7 +70,7 @@ inquirer.prompt([
     console.log("aftermark",data);
 
 
-    fs.writeFile(path.join(__dirname,'result', 'README.md'), data, err => {
+    fs.writeFile(path.join(__dirname,'result', 'NEWREADME.md'), data, err => {
         if (err) {
             console.error(err);
             return;
